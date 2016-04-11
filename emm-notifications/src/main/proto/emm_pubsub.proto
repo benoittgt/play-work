@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-syntax = "proto2";
+syntax = "proto3";
 
 option java_package = "com.google.android.work.pubsub";
 
@@ -48,6 +48,8 @@ message ProductApprovalEvent {
   optional string product_id = 1;
 
   enum ApprovalStatus {
+    // Add empty value for Proto3
+    UNKNOWN = 0;
     // The product was approved.
     APPROVED = 1;
     // The product was unapproved.
